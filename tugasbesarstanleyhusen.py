@@ -59,4 +59,5 @@ while True :
         hapusData(hapus)
     else :
         break
+    print("---------------------------------------")
    
