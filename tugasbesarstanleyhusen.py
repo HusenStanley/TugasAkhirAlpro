@@ -18,12 +18,15 @@ while True:
         listsnack = data.rstrip().split(",")
 
 def lihatData():
-    print("Daftar Menu :")
+    print("|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|")
+    print("|< ================= * Daftar Menu * ================ >|")
+    print("|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|")
     data = zip(listmakanan, listminuman, listsnack)
-    print ("{:<5} {:<18} {:<18} {:<17}".format('No','Makanan','Minuman','Snack'))
+    print ("|{:<5}|{:<15}|{:<15}|{:<16}|".format('No','Makanan','Minuman','Snack'))
+    print("|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|")
     for index, v in enumerate(data):
         makanan, minuman, snack = v
-        print ("{:<5} {:<18} {:<18} {:<10}".format( index+1, makanan, minuman, snack))
+        print ("|{:<5}|{:<15}|{:<15}|{:<16}|".format( index+1, makanan, minuman, snack))
 
 def tambahData(makanan,minuman,snack):
     listmakanan.append(makanan)
