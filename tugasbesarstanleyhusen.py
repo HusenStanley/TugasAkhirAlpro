@@ -1,11 +1,26 @@
-listmakanan = ["Ayam BakaRRR", "Ayam dibakaRRR","Ayam Bakar Bakar"]
-listminuman = ["Good Day Freeze","Joshua","Ice tafet"]
-listsnack = ["Sosis", "ASiomay", "Roti BakaRRR"]
+my_file = open("ListMenu.txt", "r") #r untuk membaca file txt
+count = 0
+
+listmakanan = []
+listminuman = []
+listsnack = []
+
+while True:
+    count += 1  
+    data = my_file.readline()
+    if not data:
+        break
+    if count == 1 :
+        listmakanan = data.rstrip().split(",")
+    elif count == 2 :
+        listminuman = data.rstrip().split(",")
+    elif count == 3 :
+        listsnack = data.rstrip().split(",")
 
 def lihatData():
     print("Daftar Menu :")
     data = zip(listmakanan, listminuman, listsnack)
-    print ("{:<5} {:<18} {:<18} {:<10}".format('No','Makanan','Minuman','Snack'))
+    print ("{:<5} {:<18} {:<18} {:<17}".format('No','Makanan','Minuman','Snack'))
     for index, v in enumerate(data):
         makanan, minuman, snack = v
         print ("{:<5} {:<18} {:<18} {:<10}".format( index+1, makanan, minuman, snack))
@@ -59,5 +74,5 @@ while True :
         hapusData(hapus)
     else :
         break
-    print("-----------------------------------------")
+  
    
