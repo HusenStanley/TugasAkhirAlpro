@@ -34,7 +34,13 @@ while True :
     print("Pilih Menu :")
     menu =int(input())
     if menu == 1 :
-
+        print("Masukkan makanan :")
+        makanan =str(input())
+        print("Masukkan minuman :")
+        minuman =str(input())
+        print("Masukkan snack :")
+        snack =str(input())
+        tambahData(makanan, minuman, snack)
     elif menu == 2 :
         lihatData()
     elif menu == 3 :
