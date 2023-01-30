@@ -44,9 +44,19 @@ while True :
     elif menu == 2 :
         lihatData()
     elif menu == 3 :
-       
+        print("Data Yang Akan Diubah")
+        ubah =int(input())
+        print("Masukkan makanan :")
+        makanan =str(input())
+        print("Masukkan minuman :")
+        minuman =str(input())
+        print("Masukkan snack :")
+        snack =str(input())
+        ubahData(ubah, makanan, minuman, snack)
     elif menu == 4 :
-
+        print("Data Yang Akan Dihapus")
+        hapus =int(input())
+        hapusData(hapus)
     else :
         break
     print("-----------------------------------------")
